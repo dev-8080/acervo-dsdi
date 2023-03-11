@@ -50,406 +50,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- UNIDADE 2 -->
-<!-- remover a letra A -->
-
-
-
-<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <li ng-repeat="gradedQuestionAttempt in (attemptCanvas.gradedQuestionAttempts | filter: { questionAttempt: { questionType: '!pageBreak' }}) track by $index">
           <bb-assessment-question class="js-assessment-question-5" attempt="attempt" graded-question-attempt="gradedQuestionAttempt" mode="attemptCanvas.ReviewMode()" index="$index" is-small-breakpoint="attemptCanvas.isSmallBreakpoint">
           <div class="assessment-question">
@@ -7080,6 +6680,208 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li ng-repeat="gradedQuestionAttempt in (attemptCanvas.gradedQuestionAttempts | filter: { questionAttempt: { questionType: '!pageBreak' }}) track by $index">
+          <bb-assessment-question class="js-assessment-question-2" attempt="attempt" graded-question-attempt="gradedQuestionAttempt" mode="attemptCanvas.ReviewMode()" index="$index" is-small-breakpoint="attemptCanvas.isSmallBreakpoint">
+          <div class="assessment-question">
+  <fieldset>
+    <!----><div class="question-header question-header-review has-question-title is-read-only" ng-class="{'has-question-title': assessmentQuestion.questionConfig.hasQuestionCountTitle, 'is-read-only': !isPrivileged() || readOnly()}" ng-if="assessmentQuestion.questionConfig.hasPoints || assessmentQuestion.questionConfig.hasQuestionCountTitle">
+      <div>
+          <!----><bb-svg-icon ng-if="assessmentQuestion.canShowCorrectAnswerRelatedDetail()" class="question-indicator incorrect" aria-label="Incorreta" size="medium" icon="close-circle">
+    <svg class="svg-icon svg-icon-directive medium-icon default directional-icon" focusable="false" aria-hidden="true" bb-cache-compilation="svg-icon">
+      <use xlink:href="https://sereduc.blackboard.com/ultra/courses/_151461_1/outline/assessment/_7497499_1/overview/attempt/_24586079_1/review/inline-feedback?attemptId=_24586079_1&amp;mode=inline&amp;columnId=_2493539_1&amp;contentId=_7497499_1&amp;courseId=_151461_1#icon-medium-close-circle" ng-href="https://sereduc.blackboard.com/ultra/courses/_151461_1/outline/assessment/_7497499_1/overview/attempt/_24586079_1/review/inline-feedback?attemptId=_24586079_1&amp;mode=inline&amp;columnId=_2493539_1&amp;contentId=_7497499_1&amp;courseId=_151461_1#icon-medium-close-circle"></use>
+    </svg>
+  </bb-svg-icon><!---->
+          <!----><legend class="question-label" ng-if="assessmentQuestion.questionConfig.hasQuestionCountTitle" bb-translate="components.directives.assessment-question.question-title" translate-values="{index: assessmentQuestion.questionAttempt.visibleQuestionNumber}">Pergunta 3</legend><!---->
+          <!--Question goal -->
+          <!---->
+          <!---->
+          <!---->
+          <!----><bb-question-grade graded-question-attempt="gradedQuestionAttempt" hide-grade="!assessmentQuestion.canViewGrades" input-id="assessment-question_id_20" is-privileged="false" ng-if="assessmentQuestion.questionConfig.hasPoints &amp;&amp; assessmentQuestion.questionAttempt.isScoreVisible">
+          <bb-ui-question-grade-pill grade="questionGrade.initValue" points-possible="questionGrade.pointsPossible" is-disabled="questionGrade.isDisabled()" save="questionGrade.save" id="questionGrade.scope.inputId"><div class="makeStylesreadonlyPill-0-2-489 readonly-pill big-pill grey default"><span class="js-pill-grade">0</span><span class="makeStylespillSeparator-0-2-493">/</span><span class="pill-points-possible">0</span></div></bb-ui-question-grade-pill></bb-question-grade><!---->
+      </div>
+      <!---->
+    </div><!---->
+    <div class="question-content" ng-show="assessmentQuestion.questionSpecificTemplateReady"><div class="multiple-answer-attempt-review multiple-answer">
+  <div class="multiple-answer-question">
+    <bb-rich-text-editor plugin-options="editorPluginOptions" ng-model="assessmentQuestion.questionAttempt.question.questionText.rawText" supports-inline-document-render="true" is-read-only="true" class="ng-pristine ng-untouched ng-valid rich-text-editor ng-not-empty"><div class="bb-editor-root" role="presentation"><div class="keyboard-tooltip-container no-toolbar"><div role="presentation" class="bb-editor-container ql-container ql-disabled is-read-only"><div class="ql-editor bb-editor" data-gramm="false" contenteditable="false" id="bb-editor-textbox"><p>Leia o trecho a seguir:</p><p>“Conceitualmente, a Revolução Verde é considerada como a difusão de tecnologias agrícolas que permitiram um aumento considerável na produção, sobretudo em países menos desenvolvidos, que ocorreu principalmente entre 1960 e 1970, a partir da modernização das técnicas utilizadas.”</p><p>Fonte: OCTAVIANO, C. Muito além da tecnologia: os impactos da Revolução Verde. ComCiência, n. 120, 2010.</p><p>Os aspectos sobre a revolução verde mudaram a forma de visão sobre os impactos ambientais. Considerando essas informações e os conteúdos estudados sobre movimentos mundiais, analise as asserções a seguir e a relação proposta entre elas:</p><p>I. A revolução verde prometia buscar ações tecnológicas modernas na agricultura para combater a fome, contudo, trouxe sérios impactos ambientais.</p><p>Porque:</p><p>II. A utilização de pesticidas e produtos químicos em excesso acarretou alta poluição do solo, aquíferos e degradação da saúde humana.&nbsp;</p><p>A seguir, analise as alternativas corretas:</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1" aria-hidden="true"></div></div></div></div></bb-rich-text-editor>
+  </div>
+
+  <div correctness="::assessmentQuestion.getAnswerResult()" was-late="::assessmentQuestion.wasAnsweredLate()" hide-correctness-text="!assessmentQuestion.canShowCorrectAnswerRelatedDetail() || !assessmentQuestion.viewHelper.isOnlyPartialCredit()" class="multiple-answer-question-answer ">
+  <!---->
+</div>
+  <!----><div class="toggle-answer-options-container" ng-if="assessmentQuestion.canShowQuestionScoreRelatedDetail()">
+    <button class="toggle-answer-options" ng-click="assessmentQuestion.viewHelper.toggleAnswerOptions()" analytics-id="assessment.question.answer.options.toggle.button">
+      <ng-switch on="assessmentQuestion.viewHelper.hideAnswerOptions">
+        <!----><span ng-switch-when="false" bb-translate="">Ocultar opções de resposta</span><!---->
+        <!---->
+        <bb-svg-icon size="custom" icon="arrow-up" class="hide-options-arrow" ng-class="{'rotate-arrow': assessmentQuestion.viewHelper.hideAnswerOptions}">
+    <svg class="svg-icon svg-icon-directive custom-icon default directional-icon" focusable="false" aria-hidden="true" bb-cache-compilation="svg-icon">
+      <use xlink:href="https://sereduc.blackboard.com/ultra/courses/_151461_1/outline/assessment/_7497499_1/overview/attempt/_24586079_1/review/inline-feedback?attemptId=_24586079_1&amp;mode=inline&amp;columnId=_2493539_1&amp;contentId=_7497499_1&amp;courseId=_151461_1#icon-custom-arrow-up" ng-href="https://sereduc.blackboard.com/ultra/courses/_151461_1/outline/assessment/_7497499_1/overview/attempt/_24586079_1/review/inline-feedback?attemptId=_24586079_1&amp;mode=inline&amp;columnId=_2493539_1&amp;contentId=_7497499_1&amp;courseId=_151461_1#icon-custom-arrow-up"></use>
+    </svg>
+  </bb-svg-icon>
+      </ng-switch>
+    </button>
+  </div><!---->
+
+  <div class="multiple-answer-answers-container" ng-show="assessmentQuestion.showAnswerOptions()">
+    <ol class="multiple-answer-answers multiple-answers-graded-review" ng-class="{'multiple-answers-graded-review': assessmentQuestion.canShowCorrectAnswerRelatedDetail()}">
+      <!----><li ng-repeat="answer in assessmentQuestion.questionAttempt.question.answers track by $index" class="js-answer-0 is-selected incorrect-answer-selected">
+        <input type="checkbox" id="assessment-question_id_20-answer-0" name="assessment-question_id_20-answer-0" ng-model="assessmentQuestion.questionAttempt.givenAnswer[$index]" disabled="" analytics-id="assessment.question.attempt.givenAnswer.input.checkbox" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+        <label for="assessment-question_id_20-answer-0" class="checkbox-label">
+          <!----><span ng-if="assessmentQuestion.viewHelper.showIncorrectIndicator($index)" class="correctness-label" bb-translate="">Incorreta: </span><!---->
+          <bb-rich-text-editor plugin-options="{'attachment': true, 'math': true, 'contentMarket': true}" ng-model="answer.answerText.rawText" is-read-only="true" class="ng-pristine ng-untouched ng-valid rich-text-editor ng-not-empty"><div class="bb-editor-root" role="presentation"><div class="keyboard-tooltip-container no-toolbar"><div role="presentation" class="bb-editor-container ql-container ql-disabled is-read-only"><div class="ql-editor bb-editor" data-gramm="false" contenteditable="false" id="bb-editor-textbox"><p>As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa correta da I.</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1" aria-hidden="true"></div></div></div></div></bb-rich-text-editor>
+        </label>
+        <!---->
+      </li><!----><li ng-repeat="answer in assessmentQuestion.questionAttempt.question.answers track by $index" class="js-answer-1 correct-answer-not-selected">
+        <input type="checkbox" id="assessment-question_id_20-answer-1" name="assessment-question_id_20-answer-1" ng-model="assessmentQuestion.questionAttempt.givenAnswer[$index]" disabled="" analytics-id="assessment.question.attempt.givenAnswer.input.checkbox" class="ng-pristine ng-untouched ng-valid ng-empty">
+        <label for="assessment-question_id_20-answer-1" class="checkbox-label">
+          <!---->
+          <bb-rich-text-editor plugin-options="{'attachment': true, 'math': true, 'contentMarket': true}" ng-model="answer.answerText.rawText" is-read-only="true" class="ng-pristine ng-untouched ng-valid rich-text-editor ng-not-empty"><div class="bb-editor-root" role="presentation"><div class="keyboard-tooltip-container no-toolbar"><div role="presentation" class="bb-editor-container ql-container ql-disabled is-read-only"><div class="ql-editor bb-editor" data-gramm="false" contenteditable="false" id="bb-editor-textbox"><p>As asserções I e II são proposições verdadeiras, e a II é uma justificativa correta da I.</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1" aria-hidden="true"></div></div></div></div></bb-rich-text-editor>
+        </label>
+        <!----><span class="correct-answer-text" ng-if="answer.correctAnswer &amp;&amp; assessmentQuestion.canShowCorrectAnswerRelatedDetail()" bb-translate="">Resposta correta</span><!---->
+      </li><!----><li ng-repeat="answer in assessmentQuestion.questionAttempt.question.answers track by $index" class="js-answer-2 answer-not-selected">
+        <input type="checkbox" id="assessment-question_id_20-answer-2" name="assessment-question_id_20-answer-2" ng-model="assessmentQuestion.questionAttempt.givenAnswer[$index]" disabled="" analytics-id="assessment.question.attempt.givenAnswer.input.checkbox" class="ng-pristine ng-untouched ng-valid ng-empty">
+        <label for="assessment-question_id_20-answer-2" class="checkbox-label">
+          <!---->
+          <bb-rich-text-editor plugin-options="{'attachment': true, 'math': true, 'contentMarket': true}" ng-model="answer.answerText.rawText" is-read-only="true" class="ng-pristine ng-untouched ng-valid rich-text-editor ng-not-empty"><div class="bb-editor-root" role="presentation"><div class="keyboard-tooltip-container no-toolbar"><div role="presentation" class="bb-editor-container ql-container ql-disabled is-read-only"><div class="ql-editor bb-editor" data-gramm="false" contenteditable="false" id="bb-editor-textbox"><p>As asserções I e II são proposições falsas.</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1" aria-hidden="true"></div></div></div></div></bb-rich-text-editor>
+        </label>
+        <!---->
+      </li><!----><li ng-repeat="answer in assessmentQuestion.questionAttempt.question.answers track by $index" class="js-answer-3 answer-not-selected">
+        <input type="checkbox" id="assessment-question_id_20-answer-3" name="assessment-question_id_20-answer-3" ng-model="assessmentQuestion.questionAttempt.givenAnswer[$index]" disabled="" analytics-id="assessment.question.attempt.givenAnswer.input.checkbox" class="ng-pristine ng-untouched ng-valid ng-empty">
+        <label for="assessment-question_id_20-answer-3" class="checkbox-label">
+          <!---->
+          <bb-rich-text-editor plugin-options="{'attachment': true, 'math': true, 'contentMarket': true}" ng-model="answer.answerText.rawText" is-read-only="true" class="ng-pristine ng-untouched ng-valid rich-text-editor ng-not-empty"><div class="bb-editor-root" role="presentation"><div class="keyboard-tooltip-container no-toolbar"><div role="presentation" class="bb-editor-container ql-container ql-disabled is-read-only"><div class="ql-editor bb-editor" data-gramm="false" contenteditable="false" id="bb-editor-textbox"><p>A asserção I é uma proposição verdadeira, e a II é uma proposição falsa.</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1" aria-hidden="true"></div></div></div></div></bb-rich-text-editor>
+        </label>
+        <!---->
+      </li><!----><li ng-repeat="answer in assessmentQuestion.questionAttempt.question.answers track by $index" class="js-answer-4 answer-not-selected">
+        <input type="checkbox" id="assessment-question_id_20-answer-4" name="assessment-question_id_20-answer-4" ng-model="assessmentQuestion.questionAttempt.givenAnswer[$index]" disabled="" analytics-id="assessment.question.attempt.givenAnswer.input.checkbox" class="ng-pristine ng-untouched ng-valid ng-empty">
+        <label for="assessment-question_id_20-answer-4" class="checkbox-label">
+          <!---->
+          <bb-rich-text-editor plugin-options="{'attachment': true, 'math': true, 'contentMarket': true}" ng-model="answer.answerText.rawText" is-read-only="true" class="ng-pristine ng-untouched ng-valid rich-text-editor ng-not-empty"><div class="bb-editor-root" role="presentation"><div class="keyboard-tooltip-container no-toolbar"><div role="presentation" class="bb-editor-container ql-container ql-disabled is-read-only"><div class="ql-editor bb-editor" data-gramm="false" contenteditable="false" id="bb-editor-textbox"><p>A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1" aria-hidden="true"></div></div></div></div></bb-rich-text-editor>
+        </label>
+        <!---->
+      </li><!---->
+    </ol>
+  </div>
+  <bb-automated-question-feedback feedback="assessmentQuestion.getAutomatedQuestionFeedback()" is-collapsible="assessmentQuestion.allowCollapsingOfAutomatedFeedbackIfShown()" editor-plugins-options="automatedFeedbackEditorPluginOptions"></bb-automated-question-feedback></div></div>
+  </fieldset>
+</div></bb-assessment-question>
+        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <li ng-repeat="gradedQuestionAttempt in (attemptCanvas.gradedQuestionAttempts | filter: { questionAttempt: { questionType: '!pageBreak' }}) track by $index">
+          <bb-assessment-question class="js-assessment-question-8" attempt="attempt" graded-question-attempt="gradedQuestionAttempt" mode="attemptCanvas.ReviewMode()" index="$index" is-small-breakpoint="attemptCanvas.isSmallBreakpoint">
+          <div class="assessment-question">
+  <fieldset>
+    <!----><div class="question-header question-header-review has-question-title is-read-only" ng-class="{'has-question-title': assessmentQuestion.questionConfig.hasQuestionCountTitle, 'is-read-only': !isPrivileged() || readOnly()}" ng-if="assessmentQuestion.questionConfig.hasPoints || assessmentQuestion.questionConfig.hasQuestionCountTitle">
+      <div>
+          <!----><bb-svg-icon ng-if="assessmentQuestion.canShowCorrectAnswerRelatedDetail()" class="question-indicator incorrect" aria-label="Incorreta" size="medium" icon="close-circle">
+    <svg class="svg-icon svg-icon-directive medium-icon default directional-icon" focusable="false" aria-hidden="true" bb-cache-compilation="svg-icon">
+      <use xlink:href="https://sereduc.blackboard.com/ultra/courses/_151461_1/outline/assessment/_7497511_1/overview/attempt/_24586197_1/review/inline-feedback?attemptId=_24586197_1&amp;mode=inline&amp;columnId=_2493541_1&amp;contentId=_7497511_1&amp;courseId=_151461_1#icon-medium-close-circle" ng-href="https://sereduc.blackboard.com/ultra/courses/_151461_1/outline/assessment/_7497511_1/overview/attempt/_24586197_1/review/inline-feedback?attemptId=_24586197_1&amp;mode=inline&amp;columnId=_2493541_1&amp;contentId=_7497511_1&amp;courseId=_151461_1#icon-medium-close-circle"></use>
+    </svg>
+  </bb-svg-icon><!---->
+          <!----><legend class="question-label" ng-if="assessmentQuestion.questionConfig.hasQuestionCountTitle" bb-translate="components.directives.assessment-question.question-title" translate-values="{index: assessmentQuestion.questionAttempt.visibleQuestionNumber}">Pergunta 9</legend><!---->
+          <!--Question goal -->
+          <!---->
+          <!---->
+          <!---->
+          <!----><bb-question-grade graded-question-attempt="gradedQuestionAttempt" hide-grade="!assessmentQuestion.canViewGrades" input-id="assessment-question_id_73" is-privileged="false" ng-if="assessmentQuestion.questionConfig.hasPoints &amp;&amp; assessmentQuestion.questionAttempt.isScoreVisible">
+          <bb-ui-question-grade-pill grade="questionGrade.initValue" points-possible="questionGrade.pointsPossible" is-disabled="questionGrade.isDisabled()" save="questionGrade.save" id="questionGrade.scope.inputId"><div class="makeStylesreadonlyPill-0-2-748 readonly-pill big-pill grey default"><span class="js-pill-grade">0</span><span class="makeStylespillSeparator-0-2-752">/</span><span class="pill-points-possible">0</span></div></bb-ui-question-grade-pill></bb-question-grade><!---->
+      </div>
+      <!---->
+    </div><!---->
+    <div class="question-content" ng-show="assessmentQuestion.questionSpecificTemplateReady"><div class="multiple-answer-attempt-review multiple-answer">
+  <div class="multiple-answer-question">
+    <bb-rich-text-editor plugin-options="editorPluginOptions" ng-model="assessmentQuestion.questionAttempt.question.questionText.rawText" supports-inline-document-render="true" is-read-only="true" class="ng-pristine ng-untouched ng-valid rich-text-editor ng-not-empty"><div class="bb-editor-root" role="presentation"><div class="keyboard-tooltip-container no-toolbar"><div role="presentation" class="bb-editor-container ql-container ql-disabled is-read-only"><div class="ql-editor bb-editor" data-gramm="false" contenteditable="false" id="bb-editor-textbox"><p>Sobre diversidade de gênero, podemos dizer que o sujeito vivencia a diversidade como parte de seu cotidiano escolar e tem total capacidade de aprender com ela. Porém, para isso acontecer, é necessário que a instituição educacional e os profissionais que nela atendem, se qualifiquem para responder de maneira mais concisa as questões que têm sido informadas pelo senso comum ou muitas vezes, por motivo de constrangimento, são lançadas ao mar da ignorância.</p><p>De acordo com estudos relacionados às questões de gênero, há diferença entre sexo, orientação sexual, identidade de gênero e expressão de gênero.</p><p>Analise o quadro a seguir e associe as colunas corretamente.</p><div data-bbtype="editAttachment" data-bbfile="{&quot;linkName&quot;:&quot;BQ03_DESENVOLVIMENTO_10.jpg.png&quot;,&quot;mimeType&quot;:&quot;image/png&quot;}" href="https://sereduc.blackboard.com/bbcswebdav/pid-17206315-dt-asiobject-rid-309984461_1/xid-309984461_1" contenteditable="false" class="wants-props-update"><div class="no-longtext"></div><div class="bb-editor-file-viewer"><div class="makeStylesroot-0-2-709"><div class="makeStylesrootControls-0-2-710 js-file-viewer-root-controls makeStylesrootControlsInline-0-2-712 js-file-viewer-controls-inline"><div class="makeStylesrootControlsWidgets-0-2-711 js-file-viewer-attachment-widgets"><div class="makeStylescontextMenu-0-2-713 js-file-viewer-context-menu"><button type="button" title="Mais opções para BQ03_DESENVOLVIMENTO_10.jpg.png" icon="[object Object]" data-analytics-id="fileViewer.action.menu" class="ms-Button ms-Button--icon root-75" tabindex="0" aria-label="Mais opções para BQ03_DESENVOLVIMENTO_10.jpg.png" data-is-focusable="true" aria-expanded="false" aria-haspopup="true" id="id__77"><div class="ms-Button-flexContainer flexContainer-65"><svg class="MuiSvgIconroot-0-2-726 makeStylesdirectionalIcon-0-2-725 makeStylesstrokeIcon-0-2-724 ms-Button-icon icon-66 MuiSvgIconfontSizeSmall-0-2-733" focusable="false" viewBox="0 0 16 16" aria-hidden="true" role="presentation"><circle cx="2" cy="8" r="1" stroke="currentColor" stroke-width="2"></circle><circle cx="8" cy="8" r="1" stroke="currentColor" stroke-width="2"></circle><circle cx="14" cy="8" r="1" stroke="currentColor" stroke-width="2"></circle></svg></div></button></div></div></div><div class="makeStylesmediaRoot-0-2-716 js-file-viewer-inline-preview" id="file-preview-https://sereduc.blackboard.com/bbcswebdav/pid-17206315-dt-asiobject-rid-309984461_1/xid-309984461_1"><div class="makeStylesfileViewerContainer-0-2-735 makeStylesfileViewerContainerImage-0-2-736"><div class="css-36"><button type="button" data-analytics-id="fileViewer.media-gallery.openGallery.button"></button></div></div></div></div></div></div><p><br></p><p>&nbsp;Assinale a alternativa que contém a ordem CORRETA de associação de cima para baixo</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1" aria-hidden="true"></div></div></div></div></bb-rich-text-editor>
+  </div>
+
+  <div correctness="::assessmentQuestion.getAnswerResult()" was-late="::assessmentQuestion.wasAnsweredLate()" hide-correctness-text="!assessmentQuestion.canShowCorrectAnswerRelatedDetail() || !assessmentQuestion.viewHelper.isOnlyPartialCredit()" class="multiple-answer-question-answer ">
+  <!---->
+</div>
+  <!----><div class="toggle-answer-options-container" ng-if="assessmentQuestion.canShowQuestionScoreRelatedDetail()">
+    <button class="toggle-answer-options" ng-click="assessmentQuestion.viewHelper.toggleAnswerOptions()" analytics-id="assessment.question.answer.options.toggle.button">
+      <ng-switch on="assessmentQuestion.viewHelper.hideAnswerOptions">
+        <!----><span ng-switch-when="false" bb-translate="">Ocultar opções de resposta</span><!---->
+        <!---->
+        <bb-svg-icon size="custom" icon="arrow-up" class="hide-options-arrow" ng-class="{'rotate-arrow': assessmentQuestion.viewHelper.hideAnswerOptions}">
+    <svg class="svg-icon svg-icon-directive custom-icon default directional-icon" focusable="false" aria-hidden="true" bb-cache-compilation="svg-icon">
+      <use xlink:href="https://sereduc.blackboard.com/ultra/courses/_151461_1/outline/assessment/_7497511_1/overview/attempt/_24586197_1/review/inline-feedback?attemptId=_24586197_1&amp;mode=inline&amp;columnId=_2493541_1&amp;contentId=_7497511_1&amp;courseId=_151461_1#icon-custom-arrow-up" ng-href="https://sereduc.blackboard.com/ultra/courses/_151461_1/outline/assessment/_7497511_1/overview/attempt/_24586197_1/review/inline-feedback?attemptId=_24586197_1&amp;mode=inline&amp;columnId=_2493541_1&amp;contentId=_7497511_1&amp;courseId=_151461_1#icon-custom-arrow-up"></use>
+    </svg>
+  </bb-svg-icon>
+      </ng-switch>
+    </button>
+  </div><!---->
+
+  <div class="multiple-answer-answers-container" ng-show="assessmentQuestion.showAnswerOptions()">
+    <ol class="multiple-answer-answers multiple-answers-graded-review" ng-class="{'multiple-answers-graded-review': assessmentQuestion.canShowCorrectAnswerRelatedDetail()}">
+      <!----><li ng-repeat="answer in assessmentQuestion.questionAttempt.question.answers track by $index" class="js-answer-0 answer-not-selected">
+        <input type="checkbox" id="assessment-question_id_73-answer-0" name="assessment-question_id_73-answer-0" ng-model="assessmentQuestion.questionAttempt.givenAnswer[$index]" disabled="" analytics-id="assessment.question.attempt.givenAnswer.input.checkbox" class="ng-pristine ng-untouched ng-valid ng-empty">
+        <label for="assessment-question_id_73-answer-0" class="checkbox-label">
+          <!---->
+          <bb-rich-text-editor plugin-options="{'attachment': true, 'math': true, 'contentMarket': true}" ng-model="answer.answerText.rawText" is-read-only="true" class="ng-pristine ng-untouched ng-valid rich-text-editor ng-not-empty"><div class="bb-editor-root" role="presentation"><div class="keyboard-tooltip-container no-toolbar"><div role="presentation" class="bb-editor-container ql-container ql-disabled is-read-only"><div class="ql-editor bb-editor" data-gramm="false" contenteditable="false" id="bb-editor-textbox"><p>1Db, 2Ad, 3Cc, 4Ba</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1" aria-hidden="true"></div></div></div></div></bb-rich-text-editor>
+        </label>
+        <!---->
+      </li><!----><li ng-repeat="answer in assessmentQuestion.questionAttempt.question.answers track by $index" class="js-answer-1 is-selected incorrect-answer-selected">
+        <input type="checkbox" id="assessment-question_id_73-answer-1" name="assessment-question_id_73-answer-1" ng-model="assessmentQuestion.questionAttempt.givenAnswer[$index]" disabled="" analytics-id="assessment.question.attempt.givenAnswer.input.checkbox" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+        <label for="assessment-question_id_73-answer-1" class="checkbox-label">
+          <!----><span ng-if="assessmentQuestion.viewHelper.showIncorrectIndicator($index)" class="correctness-label" bb-translate="">Incorreta: </span><!---->
+          <bb-rich-text-editor plugin-options="{'attachment': true, 'math': true, 'contentMarket': true}" ng-model="answer.answerText.rawText" is-read-only="true" class="ng-pristine ng-untouched ng-valid rich-text-editor ng-not-empty"><div class="bb-editor-root" role="presentation"><div class="keyboard-tooltip-container no-toolbar"><div role="presentation" class="bb-editor-container ql-container ql-disabled is-read-only"><div class="ql-editor bb-editor" data-gramm="false" contenteditable="false" id="bb-editor-textbox"><p>1Db, 2Bc, 3Cd, 4Aa</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1" aria-hidden="true"></div></div></div></div></bb-rich-text-editor>
+        </label>
+        <!---->
+      </li><!----><li ng-repeat="answer in assessmentQuestion.questionAttempt.question.answers track by $index" class="js-answer-2 correct-answer-not-selected">
+        <input type="checkbox" id="assessment-question_id_73-answer-2" name="assessment-question_id_73-answer-2" ng-model="assessmentQuestion.questionAttempt.givenAnswer[$index]" disabled="" analytics-id="assessment.question.attempt.givenAnswer.input.checkbox" class="ng-pristine ng-untouched ng-valid ng-empty">
+        <label for="assessment-question_id_73-answer-2" class="checkbox-label">
+          <!---->
+          <bb-rich-text-editor plugin-options="{'attachment': true, 'math': true, 'contentMarket': true}" ng-model="answer.answerText.rawText" is-read-only="true" class="ng-pristine ng-untouched ng-valid rich-text-editor ng-not-empty"><div class="bb-editor-root" role="presentation"><div class="keyboard-tooltip-container no-toolbar"><div role="presentation" class="bb-editor-container ql-container ql-disabled is-read-only"><div class="ql-editor bb-editor" data-gramm="false" contenteditable="false" id="bb-editor-textbox"><p>1Db, 2Ad, 3Ca, 4Bc</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1" aria-hidden="true"></div></div></div></div></bb-rich-text-editor>
+        </label>
+        <!----><span class="correct-answer-text" ng-if="answer.correctAnswer &amp;&amp; assessmentQuestion.canShowCorrectAnswerRelatedDetail()" bb-translate="">Resposta correta</span><!---->
+      </li><!----><li ng-repeat="answer in assessmentQuestion.questionAttempt.question.answers track by $index" class="js-answer-3 answer-not-selected">
+        <input type="checkbox" id="assessment-question_id_73-answer-3" name="assessment-question_id_73-answer-3" ng-model="assessmentQuestion.questionAttempt.givenAnswer[$index]" disabled="" analytics-id="assessment.question.attempt.givenAnswer.input.checkbox" class="ng-pristine ng-untouched ng-valid ng-empty">
+        <label for="assessment-question_id_73-answer-3" class="checkbox-label">
+          <!---->
+          <bb-rich-text-editor plugin-options="{'attachment': true, 'math': true, 'contentMarket': true}" ng-model="answer.answerText.rawText" is-read-only="true" class="ng-pristine ng-untouched ng-valid rich-text-editor ng-not-empty"><div class="bb-editor-root" role="presentation"><div class="keyboard-tooltip-container no-toolbar"><div role="presentation" class="bb-editor-container ql-container ql-disabled is-read-only"><div class="ql-editor bb-editor" data-gramm="false" contenteditable="false" id="bb-editor-textbox"><p>1Ac, 2Ca, 3Dc, 4Bb</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1" aria-hidden="true"></div></div></div></div></bb-rich-text-editor>
+        </label>
+        <!---->
+      </li><!----><li ng-repeat="answer in assessmentQuestion.questionAttempt.question.answers track by $index" class="js-answer-4 answer-not-selected">
+        <input type="checkbox" id="assessment-question_id_73-answer-4" name="assessment-question_id_73-answer-4" ng-model="assessmentQuestion.questionAttempt.givenAnswer[$index]" disabled="" analytics-id="assessment.question.attempt.givenAnswer.input.checkbox" class="ng-pristine ng-untouched ng-valid ng-empty">
+        <label for="assessment-question_id_73-answer-4" class="checkbox-label">
+          <!---->
+          <bb-rich-text-editor plugin-options="{'attachment': true, 'math': true, 'contentMarket': true}" ng-model="answer.answerText.rawText" is-read-only="true" class="ng-pristine ng-untouched ng-valid rich-text-editor ng-not-empty"><div class="bb-editor-root" role="presentation"><div class="keyboard-tooltip-container no-toolbar"><div role="presentation" class="bb-editor-container ql-container ql-disabled is-read-only"><div class="ql-editor bb-editor" data-gramm="false" contenteditable="false" id="bb-editor-textbox"><p>1Aa, 2Dd, 3Bb, 4Cc</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1" aria-hidden="true"></div></div></div></div></bb-rich-text-editor>
+        </label>
+        <!---->
+      </li><!---->
+    </ol>
+  </div>
+  <bb-automated-question-feedback feedback="assessmentQuestion.getAutomatedQuestionFeedback()" is-collapsible="assessmentQuestion.allowCollapsingOfAutomatedFeedbackIfShown()" editor-plugins-options="automatedFeedbackEditorPluginOptions"></bb-automated-question-feedback></div></div>
+  </fieldset>
+</div></bb-assessment-question>
+        </li>
 
 
 
